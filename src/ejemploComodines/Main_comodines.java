@@ -1,4 +1,4 @@
-package comodines;
+package ejemploComodines;
 
 /**
  * Clase principal para demostrar el uso de comodines (wildcards) en genéricos.

@@ -1,4 +1,4 @@
-package interfazGenericoOld;
+package ejempoInterfazGenericoOld;
 
 import java.util.Comparator;
 

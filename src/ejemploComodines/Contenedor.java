@@ -1,4 +1,4 @@
-package comodines;
+package ejemploComodines;
 
 /**
  * Clase genérica que almacena un elemento de tipo T.
