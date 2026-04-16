@@ -33,7 +33,7 @@ public class P12_20_TreeSetComparadores {
        Comparator<Cliente> comparaNombres = new Comparator<Cliente>() {
             @Override
             public int compare(Cliente c1, Cliente c2) {
-                return c1.nombre.compareTo(c2.nombre);
+                return c1.getNombre().compareTo(c2.getNombre());
             }
         };        
         

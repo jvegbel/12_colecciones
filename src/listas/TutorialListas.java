@@ -16,8 +16,11 @@ public class TutorialListas {
         lista.add(-2); 
         lista.add(0); 
         lista.add(3); 
+        lista.add(-5); 
+        lista.add(3); 
         lista.add(7); 
-        lista.add(-5);                       
+        lista.add(-5);        
+          
         System.out.print("Lista: " + lista);
         
         //E get (1nt indice): 
@@ -30,8 +33,8 @@ public class TutorialListas {
         //hubiera previamente en esa posicion, que es devuelto. 
         //Con el siguiente codigo, vamos a poner el valor 10 en el elemento de indice 3, 
         //sustituyendo su valor actual (0), que es devuelto y asignado a la variable y.
-        Integer y = lista.set(3,10);
-        System.out.println("y: " + y);
+        //Integer y = lista.set(3,10);
+        System.out.println("y: " + lista.set(3,10));
         System.out.println(lista);
         
         //void add (int indice, E elem): inserta el valor elem en la posición indice.
@@ -40,7 +43,10 @@ public class TutorialListas {
         //Por ejemplo, si queremos insertar el valor 5 entre el -2 y el 10, se insertará 
         //en la posición 3, que actualmente ocupa el 10. Este y los elementos que le siguen 
         //se desplazarán un lugar hacia el final de la lista.
-        lista.add(3, 5) ;
+        lista.add(3, 500) ;
+        System.out.println ("Insertamos el 5 en la posicion 3: " + lista) ;
+        // Insertar al final de la lista
+        lista.add(lista.size(), 500) ;
         System.out.println ("Insertamos el 5 en la posicion 3: " + lista) ;
 
         //boolean addAll (int indice, Collection <? extends E> c) : 
@@ -60,7 +66,7 @@ public class TutorialListas {
         lista.addAll(2, otraLista) ;
         System.out.println (lista) ;
     
-        //E remove (int indice): elimina el elemento que ocupa el lugar indice y lo devuelve.
+        //Boolean remove (int indice): elimina el elemento que ocupa el lugar indice y lo devuelve.
         //En este caso, hay que tener cuidado si lo usamos en una lista de objetos Integer,
         //como la de nuestro ejemplo, ya que una sentencia como
         lista.remove(5);
@@ -75,6 +81,8 @@ public class TutorialListas {
         //Así estaríamos pasando como argumento un objeto Integer y no un valor int, con lo cual
         //Java ejecuta la versión del método correspondiente a la interfaz Collection y elimina el
         //elemento de valor 5.
+        System.out.println(lista.remove(Integer.valueOf(500)));
+        System.out.println(lista);
 
         /********************************************************************
          *            FUNCIONES DE BÚSQUEDA y COMPARACIÓN de LIST           *
@@ -118,7 +126,7 @@ public class TutorialListas {
         Comparator<Integer> comparador = new Comparator<Integer>() {
             @Override
             public int compare(Integer num1, Integer num2) {
-                return num2 - num1; // cambiar a 'num1 - num2' para orden ascendente
+                return num1 - num2; // cambiar a 'num1 - num2' para orden ascendente
             }
         };
         lista.sort(comparador);

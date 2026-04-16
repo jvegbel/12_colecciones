@@ -42,7 +42,7 @@ public class TutorialSet {
         System.out.println("¿Elimino el 11 de conjuntoHash?: " + conjuntoHash.remove(11));
         //Como no lo encuentra devuelve un false
         System.out.println("¿Elimino el 9 de conjuntoHash?: " + conjuntoHash.remove(9));
-        //Como SÍ lo encuentra devuelve un true y lo elimina del conjunto
+        //Como S�? lo encuentra devuelve un true y lo elimina del conjunto
         System.out.println(conjuntoHash);
     //6. Iterator<E>1terator()
         System.out.println("\n\n6a. Iterator (while):");
@@ -128,7 +128,7 @@ public class TutorialSet {
         
         //Para acceder a los nombres hay que hacer un cast
         System.out.println("DNI del primer cliente según el orden del conjunto: " + 
-        ((Cliente)tablaObjeto[0]).dni + " que corresponde a " +  ((Cliente)tablaObjeto[0]).nombre) ;
+        ((Cliente)tablaObjeto[0]).dni + " que corresponde a " +  ((Cliente)tablaObjeto[0]).getNombre()) ;
         //Reordeno la tabla por orden natural (DNI es el compareTo)
         Arrays.sort(tablaObjeto);
         System.out.println( Arrays.toString(tablaObjeto));
@@ -162,7 +162,7 @@ public class TutorialSet {
         Comparator<Cliente> ordenaNombre = new Comparator<>() {
             //@Override
             public int compare(Cliente c1, Cliente c2) {
-                return c1.nombre.compareTo(c2.nombre);
+                return c1.getNombre().compareTo(c2.getNombre());
             }
         };
         Arrays.sort(tablaClientes, ordenaNombre.reversed());

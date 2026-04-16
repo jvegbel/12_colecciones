@@ -7,7 +7,7 @@ import java.time.temporal.ChronoUnit;
 class Cliente implements Comparable<Cliente> {
 
     String dni;
-    String nombre;
+    private String nombre;
     LocalDate fechaNacimiento;
 
     Cliente(String dni, String nombre, String fechaNacimiento) {
@@ -34,6 +34,13 @@ class Cliente implements Comparable<Cliente> {
 
     @Override
     public String toString() {
-        return "DNI: " + dni + " Nombre: " + nombre + " Edad: " + edad() + "\n";
+        return "DNI: " + dni + " Nombre: " + getNombre() + " Edad: " + edad() + "\n";
+    }
+
+    /**
+     * @return the nombre
+     */
+    public String getNombre() {
+        return nombre;
     }
 }

@@ -8,7 +8,7 @@ public class Ejercicio1206_ColeccionAleatorios {
 
     public static void main(String[] args) {
         Collection<Integer> lista = new ArrayList<>();//admite repetidos
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 20; i++) {
             lista.add((int) (Math.random() * 10 + 1));
         }
        
@@ -23,14 +23,16 @@ public class Ejercicio1206_ColeccionAleatorios {
             eliminado = lista.remove(5);
         }
         System.out.println("Eliminado el 5: " + lista);
-        
+         int contador = 0;
         //Método sin iterator simplificado mediante el boolean remove() ;    
-        while (lista.remove(7));
-        System.out.println("Eliminado el 7: " + lista);
-        
+        while (lista.remove(7)) {
+            contador++;
+        }
+        System.out.println("El valor 7 se ha encontrado " + contador + " veces");
+        System.out.println("Coleccion Eliminando el 7: " + lista);
          
         // Método con iterator y foreach
-        for (Iterator<Integer> it = lista.iterator(); it.hasNext();) {
+        for (Iterator<Integer> it = lista.iterator(); it.hasNext(); ) {
            if (it.next() == 4) {
                it.remove();
            }
