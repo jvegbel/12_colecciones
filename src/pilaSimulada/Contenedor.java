@@ -31,7 +31,9 @@ public class Contenedor<T extends Comparable<T>> implements Pila<T>{
 
     @Override
     public T pop() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        T aux = arrayObjetos[arrayObjetos.length-1];
+        this.arrayObjetos = Arrays.copyOf(arrayObjetos, arrayObjetos.length-1);
+        return aux;
     }
 
     @Override
